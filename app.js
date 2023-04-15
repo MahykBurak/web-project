@@ -24,4 +24,6 @@ function consumer(){
     loadLights(lights)
   }
 }
-consumer()
+if(mode === 'consumer'){
+  consumer()
+}
