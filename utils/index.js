@@ -10,6 +10,47 @@ function setInfo(){
   dayTextContainer.innerHTML = todayName
 timeContainer.innerHTML = currentTime
 }
+
+function loadAC(ac){
+  const { heat, air, cold, hot } = ac
+  const heatValue = document.getElementById('heat-value')
+  const heatControlAir = document.getElementById('heat-control-air')
+  const heatControlCold = document.getElementById('heat-control-cold')
+  const heatControlHot = document.getElementById('heat-control-hot')
+  const AirActiveIcon = '<img src="assets/air.png"/>'
+  const AirInactiveIcon ='<img src="assets/air-inactive.png"/>'
+  const ColdActiveIcon = '<img src="assets/cold.png"/>'
+  const ColdInactiveIcon = '<img src="assets/cold-inactive.png"/>'
+  const HotActiveIcon = '<img src="assets/sun.png"/>'
+  const HotInactiveIcon = '<img src="assets/sun-inactive.png"/>'
+  heatValue.innerHTML = heat
+  if(air){
+    heatControlAir.classList.add('active-control')
+    heatControlAir.innerHTML = AirActiveIcon
+  }else{
+    heatControlAir.classList.remove('active-control')
+    heatControlAir.classList.add('inactive-control')
+    heatControlAir.innerHTML = AirInactiveIcon
+  }
+  if(cold){
+    heatControlCold.classList.add('active-control')
+    heatControlCold.innerHTML = ColdActiveIcon
+  }else{
+    heatControlCold.classList.remove('active-control')
+    heatControlCold.classList.add('inactive-control')
+    heatControlCold.innerHTML = ColdInactiveIcon
+  }
+  if(hot){
+    heatControlHot.classList.add('active-control')
+    heatControlHot.innerHTML = HotActiveIcon
+  }else{
+    heatControlHot.classList.remove('active-control')
+    heatControlHot.classList.add('inactive-control')
+    heatControlHot.innerHTML = HotInactiveIcon
+  }
+}
+
+
 function loadLights(lights){
   const {kitchen, livingRoom, saloon, bath}=lights
   const lightsKitchenImg = document.getElementById('lights-kitchen-img')
