@@ -2,6 +2,17 @@
   background-color: #000000;
 }
 
-.inactive-control {
+.inactive-control-heat {
   background-color: #8ea869;
+}
+.inactive-control-water {
+  background-color: #187084;
+}
+
+.cleaner-active-room {
+  background-color: #045072;
+  border: 1px solid #ffffff;
+}
+.cleaner-inactive-room {
+  background-color: #3d728a;
 }
