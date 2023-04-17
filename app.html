@@ -36,10 +36,10 @@
           </div>
         </div>
         <div id="home-apps-container" class="grid grid-cols-2 grid-rows-2 col-span-2  gap-2 h-2/3 my-auto">
-          <div id="heat-container" class="col-span-1 row-span-1 bg-[#DFECBD] rounded-md relative text-black font-semibold text-center flex flex-col justify-center items-center">
+          <div id="heat-container" class="cursor-pointer col-span-1 row-span-1 bg-[#DFECBD] rounded-md relative text-black font-semibold text-center flex flex-col justify-center items-center">
             <span class="absolute top-2 left-2 text-md">AC</span>
             <h4 id="heat-value" class="text-6xl">22°</h4>
-            <p id="hear-status" class="text-lg">running</p>
+            <p id="heat-status" class="text-lg">running</p>
             <div id="heat-controls" class="flex justify-between w-full px-4 mt-6">
               <div id="heat-control-air" class="w-10 h-10 rounded-md p-0.5  flex items-center justify-center">
               </div>
@@ -49,7 +49,7 @@
               </div>
             </div>
           </div>
-          <div id="lights-container" class="col-span-1 row-span-1   bg-[#EBD2B2] text-black rounded-md p-1 flex items-center justify-between">
+          <div id="lights-container" class="cursor-pointer col-span-1 row-span-1   bg-[#EBD2B2] text-black rounded-md p-1 flex items-center justify-between">
             <div id="lights-rooms" class="flex flex-col gap-1 pr-4">
               <div id="lights-kitchen" class="flex items-center gap-1 justify-between ">
                 <span class="text-xl">Kitchen</span>
@@ -66,13 +66,11 @@
               <div id="lights-saloon" class="flex items-center gap-1 justify-between">
                 <span class="text-xl">Saloon</span>
                 <div id="lights-saloon-img" class="w-1/6">
-                
                 </div>
               </div>
               <div id="lights-bath" class="flex items-center gap-1 justify-between">
                 <span class="text-xl">Bath</span>
                 <div id="lights-bath-img" class="w-1/6">
-               
                 </div>
               </div>
             </div>
@@ -80,12 +78,180 @@
               <img src="assets/light-image.png" class="h-full -mx-1"/>
             </div>
           </div>
-          <div id="cleaner-container" class="col-span-1 row-span-1  bg-[#77AAC1] rounded-md">a</div>
-          <div id="water-container" class="col-span-1 row-span-1  bg-[#60BAC6] rounded-md">a</div>
-        </div>
+          <div id="cleaner-container" class="cursor-pointer col-span-1 row-span-1 text-black bg-[#77AAC1] p-2 rounded-md flex flex-col justify-between">
+            <div class="flex w-full justify-between h-1/2">
+              <div class="flex flex-col gap-1 my-auto">
+                <span id="cleaner-current-room" class="text-2xl"></span>
+                <span id="cleaner-remaining-time" class="text-2xl">15min</span>
+              </div>
+              <img src="assets/cleaner.png" alt="cleaner"/>
+            </div>
+            <span id="cleaner-status-text" class="text-3xl text-center">running</span>
+            <div class="flex w-full justify-center gap-2 items-center">
+              <img src="assets/battery.png" class="w-1/5"/>
+              <span class="text-3xl">80%</span>
+            </div>
+
+          </div>
+          <div id="water-container" class="cursor-pointer col-span-1 row-span-1  bg-[#60BAC6] rounded-md text-black font-semibold text-center flex flex-col justify-center items-center">  
+            <h4 id="water-heat-value" class="text-6xl">22°</h4>
+            <div id="water-controls" class="flex justify-around w-1/2 px-4 mt-6">
+              <div id="water-control-cold" class="w-10 h-10 rounded-md p-1 flex items-center justify-center">
+              </div>
+              <div id="water-control-hot" class="w-10 h-10 rounded-md p-0.5 flex items-center justify-center">
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
     </div>
-    <div id="details" class="h-full col-span-3 border border-gray-100 rounded-lg"></div>
+    <div id="details" class="h-full col-span-3 border border-gray-100 rounded-xl">
+      <!--Heat Deatils-->
+      <div id="heat-control-container" class="hidden h-full rounded-xl">
+        <div  class="w-full h-full bg-[#DFECBD] flex flex-col py-2 px-4 justify-between items-center text-black rounded-xl">
+          <div  class=" flex w-full justify-between items-center"> 
+            <button id="heat-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-[#C6E0A2] border border-gray-400">
+              <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+              </button>
+              <span class="top-3 right-3 text-2xl font-semibold">AC</span>
+          </div>
+          <img src="assets/air-cond.png" alt="air conditioning" class="w-3/4"/>
+          <div  class="rounded-3xl w-full h-full bg-black/20 p-2 flex flex-col items-center ">
+            <div class="flex justify-around items-center w-full">
+              <button id="dec-heat-btn" class="hidden bg-white w-16 h-16 rounded-full">
+                <img src="assets/up-arrow.png" class="rotate-180"/>
+              </button>
+              <span id="control-heat-value" class="text-8xl font-bold">22</span>
+              <button id="inc-heat-btn" class="hidden bg-white w-16 h-16 rounded-full" >
+                <img src="assets/up-arrow.png"/>
+              </button>
+            </div>
+            <div class="flex gap-2 mt-24">
+              <button id="detail-heat-control-air" class="w-16 h-16 rounded-md p-0.5  flex items-center justify-center">
+              </button>
+              <button id="detail-heat-control-cold" class="w-16 h-16 rounded-md p-1  flex items-center justify-center">
+              </button>
+              <button id="detail-heat-control-hot" class="w-16 h-16 rounded-md p-0.5 flex items-center justify-center">
+              </button>
+            </div>
+            <button id="control-ac" class="mt-auto hidden w-1/2 py-4 px-8 flex justify-between items-center rounded-full bg-white text-black">
+              <img src="assets/pause.png" class="w-10 h-10"/>
+              <span id="ac-control-text" class="text-4xl"></span>
+            </button>
+          </div>
+      </div>
+    </div>
+    <!--Lights Details-->
+      <div id="lights-control-container"  class="hidden relative w-full h-full bg-[#EBD2B2] flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black">
+        <div class="w-full flex justify-between items-center">
+          <button id="lights-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-black/20 border border-gray-400">
+            <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+          </button>
+            <span class="top-3 right-3 text-2xl font-semibold">Lights</span>
+        </div>
+        <img src="assets/light-image.png" alt="light-img" class="absolute h-[90%] bottom-5"/>
+        <div  class="rounded-3xl w-full z-30 h-[70%] bg-black/20 p-2 flex flex-col items-center">
+          <div class="grid grid-cols-2 grid-rows-2 gap-12 h-2/3">
+            <button id="control-kitchen-light" class="bg-black/10 p-8 flex flex-col items-center justify-between rounded-2xl">
+              <div class="object-fit w-1/2" id="kitchen-control-img">
+                <img src="assets/lights-off.png"/>
+              </div>
+              <h2 id="control-kitchen-label" class="text-3xl font-bold">Kitchen</h2>
+            </button>
+            <button id="control-living-light" class="bg-black/10 p-8 flex flex-col items-center justify-between rounded-2xl">
+              <div class="object-fit w-1/2" id="living-control-img">
+                <img src="assets/lights-off.png"/>
+              </div>
+              <h2 id="control-living-label" class="text-3xl font-bold">Living</h2>
+            </button>
+            <button id="control-saloon-light" class="bg-black/10 p-8 flex flex-col items-center justify-between rounded-2xl">
+              <div class="object-fit w-1/2" id="saloon-control-img">
+                <img src="assets/lights-off.png"/>
+              </div>
+              <h2 id="control-saloon-label" class="text-3xl font-bold">Saloon</h2>
+            </button>
+            <button id="control-bath-light" class="bg-black/10 p-8 flex flex-col items-center justify-between rounded-2xl">
+              <div class="object-fit w-1/2" id="bath-control-img">
+                <img src="assets/lights-off.png"/>
+              </div>
+              <h2 id="control-bath-label" class="text-3xl font-bold">Bath</h2>
+            </button>
+          </div>
+          <button id="control-close-lights" class="mt-auto w-1/2 mb-4 py-4 px-8 flex justify-center text-xl items-center rounded-full bg-white text-black">
+            Close All Lights
+          </button>
+        </div>
+      </div>
+    <!--water-->
+    <div id="water-control-container"  class="hidden w-full h-full bg-[#60BAC6] flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black">
+      <div  class=" flex w-full justify-between items-center"> 
+        <button id="water-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-[#589EBC] border border-gray-400">
+          <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+          </button>
+          <span class="top-3 right-3 text-2xl font-semibold">Water</span>
+      </div>
+      <img src="assets/waterDrop.png" alt="water drop" class="w-2/5"/>
+      <div  class="rounded-3xl w-full h-full bg-black/20 p-2 flex flex-col items-center ">
+        <div class="flex justify-around items-center w-full">
+          <button id="dec-water-btn" class="hidden bg-white w-16 h-16 rounded-full">
+            <img src="assets/up-arrow.png" class="rotate-180"/>
+          </button>
+          <span id="control-water-value" class="text-8xl font-bold">22</span>
+          <button id="inc-water-btn" class="hidden bg-white w-16 h-16 rounded-full" >
+            <img src="assets/up-arrow.png"/>
+          </button>
+        </div>
+        <div class="flex gap-2 mt-24">
+
+          <button id="detail-water-control-cold" class="w-16 h-16 rounded-md p-1  flex items-center justify-center">
+          </button>
+          <button id="detail-water-control-hot" class="w-16 h-16 rounded-md p-0.5 flex items-center justify-center">
+          </button>
+        </div>
+       
+      </div>
+    </div>
+    <!--cleaner-->
+    <div id="cleaner-control-container"  class="hidden w-full h-full bg-[#77AAC1] flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black relative">
+      <div  class=" flex w-full justify-between items-center"> 
+        <button id="cleaner-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-[#589EBC] border border-gray-400">
+          <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+          </button>
+          <span class="top-3 right-3 text-2xl font-semibold text-center">Robot<br/>Vacuum</span>
+      </div>
+
+      <img src="assets/cleaner.png" alt="cleaner" class="absolute w-full top-32"/>
+      <div  class="rounded-3xl w-full h-[70%] z-30 bg-black/20 p-2 flex flex-col items-center justify-between">
+        <div class="flex items-center justify-around h-2/5 py-1 gap-2 w-full">
+          <div class="h-full rounded-xl text-center bg-gray-800/40 text-white w-full flex flex-col p-4 items-center gap-12 justify-center">
+            <span  class="text-4xl font-semibold">Area</span>
+            <span id="cleaner-control-area" class="text-4xl">25m2</span>
+          </div>
+          <div class="h-full rounded-xl text-center bg-gray-800/40 text-white w-full flex flex-col p-4 items-center justify-between">
+            <span class="text-4xl font-semibold">charging status</span>
+            <div>
+              <span class="text-4xl">80%</span>
+            <img src="assets/battery.png" alt="battery" class="w-1/2 mx-auto"/>
+            </div>
+          </div>
+          <div class="h-full rounded-xl text-center bg-gray-800/40 text-white w-full flex flex-col p-4 items-center gap-12 justify-center">
+            <span class="text-4xl font-semibold">Remaining Time</span>
+            <span id="cleaner-control-remaining-time" class="text-4xl">15min</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 gap-12 mt-8">
+          <button id="cleaner-control-room-kitchen" class="p-2 text-4xl cleaner-inactive-room text-white text-center rounded-xl">Kitchen</button>
+          <button id="cleaner-control-room-living" class="p-2 text-4xl cleaner-inactive-room text-white text-center rounded-xl">Living Room</button>
+          <button id="cleaner-control-room-bath" class="p-2 text-4xl cleaner-inactive-room text-white text-center rounded-xl">Bath</button>
+          <button id="cleaner-control-room-saloon" class="p-2 text-4xl cleaner-inactive-room text-white text-center rounded-xl">Saloon</button>
+        </div>
+        <button id="cleaner-control" class="mt-auto hidden w-1/2 py-4 px-8 flex justify-between items-center rounded-full bg-white text-black">
+          <img src="assets/pause.png" class="w-10 h-10"/>
+          <span id="cleaner-control-text" class="text-4xl"></span>
+        </button>
+      </div>
+    </div>
+  </div>
   </div>
   <script type="module" src="utils/index.js"></script>
 	<script type="module" src="app.js"></script>
