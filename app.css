@@ -100,3 +100,22 @@ margin-bottom: auto;
 .col-span-1{
   grid-column: span 1 / span 1;
 }
+.h1-3{
+  height: 33.333333%;
+}
+.border{
+  border-width: 1px;
+}
+.rounded-lg{
+  border-radius: 0.5rem; 
+}
+.bg-day-container{
+  background-color: #EBD2B2;
+}
+.text-center{
+  text-align: center;
+}
+.text-6xl{
+  font-size: 3.75rem; 
+line-height: 1;
+}
