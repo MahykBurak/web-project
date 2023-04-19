@@ -31,3 +31,20 @@
 .grid-cols-8{
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
+.gap-2{
+  gap: 0.5rem; /* 8px */
+}
+.py-3{
+  padding-top: 0.75rem; /* 12px */
+padding-bottom: 0.75rem; /* 12px */
+}
+.px-3{
+  padding-left: 0.75rem; /* 12px */
+padding-right: 0.75rem; /* 12px */
+}
+.items-center{
+  align-items: center;
+}
+.text-teal-50{
+  color: rgb(240 253 250);
+}
