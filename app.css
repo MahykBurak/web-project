@@ -48,3 +48,18 @@ padding-right: 0.75rem; /* 12px */
 .text-teal-50{
   color: rgb(240 253 250);
 }
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.h-full{
+  height: 100%;
+}
+.col-span-5{
+  grid-column: span 5 / span 5;
+}
+.gap-1{
+  gap: 0.25rem;
+}
