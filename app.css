@@ -81,3 +81,22 @@ padding-right: 0.75rem; /* 12px */
 .w-full{
   width: 100%;
 }
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.p-1{
+  padding: 0.25rem;
+}
+.justify-center{
+  justify-content: center;
+}
+.h2-3{
+  height: 66.666667%;
+}
+.my-auto{
+  margin-top: auto;
+margin-bottom: auto;
+}
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
