@@ -339,3 +339,39 @@ line-height: 2.5rem;
   opacity: 10;
   background-color: black;
 }
+.mb-4{
+  margin-bottom: 1rem;
+}
+.p-4{
+  padding: 1rem;
+}
+.bg-water-back-button{
+  background-color:#589EBC;
+}
+.w2-5{
+  width: 40%;
+}
+.top-32{
+  top: 8rem;
+}
+.h2-5{
+  height: 40%;
+}
+.py-1{
+  padding-top: 0.25rem; 
+  padding-bottom: 0.25rem;
+}
+.bg-gray-800-40{
+  opacity: 40;
+  background-color: rgb(31 41 55);
+}
+.text-white{
+  color: rgb(255 255 255);
+}
+.mx-auto{
+  margin-left: auto;
+margin-right: auto;
+}
+.mt-8{
+  margin-top: 2rem;
+}
