@@ -228,4 +228,16 @@ line-height: 2.25rem;
 .w1-5{
   width: 20%;
 }
+.bg-water-container{
+  background-color: #60BAC6;
+}
+.justify-around{
+  justify-content: space-around;
+}
+.w1-2{
+  width: 50%;
+}
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
 
