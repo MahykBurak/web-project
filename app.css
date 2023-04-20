@@ -190,3 +190,25 @@ padding-right: 1rem;
 .p-1{
   padding: 0.25rem;
 }
+.text-md{
+
+}
+.pr-4{
+  padding-right: 1rem;
+}
+.text-xl{
+  font-size: 1.25rem; 
+line-height: 1.75rem; 
+}
+.w1-6{
+  width: 16.666667%;
+}
+.py-4{
+  padding-top: 1rem; 
+padding-bottom: 1rem; 
+}
+.-mx-1{
+  margin-left: -0.25rem; /* 4px */
+margin-right: -0.25rem; /* 4px */
+}
+
