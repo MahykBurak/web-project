@@ -240,4 +240,32 @@ line-height: 2.25rem;
 .col-span-3{
   grid-column: span 3 / span 3;
 }
+.border-gray-100{
+  border-color: rgb(243 244 246);
+}
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+.hidden{
+  display: none;
+}
+.py-2{
+  padding-top: 0.5rem; 
+padding-bottom: 0.5rem;
+}
+.rounded-full{
+  border-radius: 9999px;
+}
+.w-16{
+  width: 4rem;
+}
+.h-16{
+  height: 4rem;
+}
+.bg-heat-back-button{
+  background-color:#C6E0A2
+}
+.border-gray-400{
+  border-color: rgb(156 163 175);
+}
 
