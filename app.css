@@ -168,9 +168,6 @@ line-height: 2rem;
 .left-2{
   left: 0.5rem;
 }
-.text-md{
-
-}
 .justify-between{
   justify-content: space-between;
 }
@@ -180,4 +177,16 @@ padding-right: 1rem;
 }
 .mt-6{
   margin-top: 1.5rem;
+}
+.w-10{
+  width: 2.5rem;
+}
+.h-10{
+  height: 2.5rem;
+}
+.p0-5{
+  padding: 0.125rem;
+}
+.p-1{
+  padding: 0.25rem;
 }
