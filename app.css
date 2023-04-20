@@ -156,3 +156,28 @@ line-height: 2rem;
 .text-black{
   color: rgb(0 0 0);
 }
+.font-semibold{
+  font-weight: 600;
+}
+.absolute{
+  position: absolute;
+}
+.top-2{
+  top: 0.5rem;
+}
+.left-2{
+  left: 0.5rem;
+}
+.text-md{
+
+}
+.justify-between{
+  justify-content: space-between;
+}
+.px-4{
+  padding-left: 1rem; 
+padding-right: 1rem; 
+}
+.mt-6{
+  margin-top: 1.5rem;
+}
