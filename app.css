@@ -295,3 +295,24 @@ padding-bottom: 0.5rem;
 .rotate-180{
   transform: rotate(180deg);
 }
+.text-8xl{
+  font-size: 6rem; 
+line-height: 1;
+}
+.font-bold{
+  font-weight: 700;
+}
+.mt-24{
+  margin-top: 6rem;
+}
+.mt-auto{
+  margin-top: auto;
+}
+.px-8{
+  padding-left: 2rem; 
+padding-right: 2rem; 
+}
+.text-4xl{
+  font-size: 2.25rem; 
+line-height: 2.5rem; 
+}
