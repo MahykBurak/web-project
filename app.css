@@ -268,4 +268,30 @@ padding-bottom: 0.5rem;
 .border-gray-400{
   border-color: rgb(156 163 175);
 }
+.top-3{
+  top: 0.75rem;
+}
+.right-3{
+  right: 0.75rem;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.w3-4{
+  width: 75%;
+}
+.rounded-3xl{
+  border-radius: 1.5rem;
+}
+.bg-black-20{
 
+}
+.content-fit{
+
+}
+.bg-white{
+  background-color: rgb(255 255 255);
+}
+.rotate-180{
+  transform: rotate(180deg);
+}
