@@ -30,8 +30,8 @@
               <h4 class="text-gray-500 text-lg">am</h4> 
             </div>
           </div>
-          <div id="weather" class="h2-3 border-8 rounded-lg">
-            <img src="assets/weather.png" alt="weather" class="w-full -my-8 mx-auto"/>
+          <div id="weather" class="h-2/3 border-8 rounded-lg">
+            <img src="assets/weather.png" alt="weather" class="w-3/4 -my-8 mx-auto"/>
             <h4 class="text-5xl text-center">26°</h4>
             <p class="text-gray-500 text-lg text-center">Today will be </br> cloudy</p>
           </div>
@@ -111,13 +111,13 @@
           </div>
       </div>
     </div>
-    <div id="details" class="h-full w-1/2 xl:w-1/3 border border-gray-100 rounded-xl">
+    <div id="details" class="h-full w-1/2 xl:w-1/3 border p-1 border-gray-100 rounded-xl">
       <!--Heat Deatils-->
       <div id="heat-control-container" class="hidden w-full h-full rounded-xl">
         <div  class="w-full h-full bg-DFECBD flex flex-col py-2 px-4 justify-between items-center text-black rounded-xl">
           <div  class="flex w-full justify-between items-center"> 
-              <button id="heat-back-button" class="rounded-full w-16 h-16 content-fit bg-C6E0A2 border border-gray-400">
-                <img src="assets/backArrow.png" alt="back arrow" class="w-full"/>
+              <button id="heat-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-black-20 border border-gray-400">
+                <img src="assets/backArrow.png" alt="back arrow" />
               </button>
               <span class="top-3 right-3 text-2xl font-semibold">AC</span>
           </div>
@@ -151,7 +151,7 @@
       <div id="lights-control-container"  class="hidden relative w-full h-full bg-EBD2B2 flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black">
         <div class="w-full flex justify-between items-center">
           <button id="lights-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-black-20 border border-gray-400">
-            <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+            <img src="assets/backArrow.png" alt="back arrow" />
           </button>
             <span class="top-3 right-3 text-2xl font-semibold">Lights</span>
         </div>
@@ -196,7 +196,7 @@
     <div id="water-control-container"  class="hidden w-full h-full bg-60BAC6 flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black">
       <div  class=" flex w-full justify-between items-center"> 
         <button id="water-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-589EBC border border-gray-400">
-          <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+          <img src="assets/backArrow.png" alt="back arrow" />
           </button>
           <span class="top-3 right-3 text-2xl font-semibold">Water</span>
       </div>
@@ -225,7 +225,7 @@
     <div id="cleaner-control-container"  class="hidden w-full h-full bg-77AAC1 flex flex-col py-2 px-4 justify-between rounded-xl items-center text-black relative">
       <div  class=" flex w-full justify-between items-center"> 
         <button id="cleaner-back-button" class="rounded-full p-4 w-16 h-16 content-fit bg-589EBC border border-gray-400">
-          <img src="assets/backArrow.png" alt="back arrow" class="h-8"/>
+          <img src="assets/backArrow.png" alt="back arrow" />
           </button>
           <span class="top-3 right-3 text-2xl font-semibold text-center">Robot<br/>Vacuum</span>
       </div>
@@ -249,15 +249,15 @@
             <span id="cleaner-control-remaining-time" class="text-4xl">15min</span>
           </div>
         </div>
-        <div class="flex flex-col h1-3 gap-12 mt-8">
-          <div class="w-full flex gap-12 h1-2">
+        <div class="grid grid-cols-2 grid-rows-2  gap-12 mt-8">
+
           <button id="cleaner-control-room-kitchen" class="p-2 w-full h-full text-4xl cleaner-inactive-room text-white text-center rounded-xl">Kitchen</button>
           <button id="cleaner-control-room-living" class="p-2 w-full h-full text-4xl cleaner-inactive-room text-white text-center rounded-xl">Living Room</button>
-        </div>
-        <div class="w-full flex gap-12 h1-2">
+
+
           <button id="cleaner-control-room-bath" class="p-2 w-full h-full text-4xl cleaner-inactive-room text-white text-center rounded-xl">Bath</button>
           <button id="cleaner-control-room-saloon" class="p-2 w-full h-full text-4xl cleaner-inactive-room text-white text-center rounded-xl">Saloon</button>
-          </div>
+
         </div>
         <button id="cleaner-control" class="mt-auto hidden w1-2 py-4 px-8 flex justify-between items-center rounded-full bg-white text-black">
           <img src="assets/pause.png" class="w-10 h-10"/>

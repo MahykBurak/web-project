@@ -209,6 +209,7 @@ margin-bottom: auto;
   height: 33.333333%;
 }
 .border{
+  border: 1px solid;
   border-width: 1px;
 }
 .rounded-lg{
