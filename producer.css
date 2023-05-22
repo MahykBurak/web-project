@@ -1,6 +1,16 @@
 body{
     background-color: black;
 }
-.bar{
+.bar_container{
     color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 20px;
+}
+.home_automation{
+    padding-left: 100px;
+}
+.clock{
+    padding-right: 100px;
 }
