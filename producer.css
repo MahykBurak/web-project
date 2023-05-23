@@ -41,38 +41,41 @@ body{
     height: 300px;
     gap: 45px;
 }
-.temprature{
+.temprature_container{
     margin-left: 100px; 
-  border-style: solid;
-  background-color: #DFECBD;
+    border-style: solid;
+    background-color: #DFECBD;
 }
-.vakuum-cleaner{
+.vakuum-cleaner_container{
     margin-right: 100px;
-border-style: solid;
-background-color: #77AAC1;
+    border-style: solid;
+    background-color: #77AAC1;
 }
 .row-2{
     margin-top: 35px;
     display: grid;
    grid-template-columns: repeat(3,1fr);
     height: 300px;
-    gap: 0px;
-   /* flex-wrap: nowrap;*/
-    
+    gap: 0px; 
 }
-.door{
+.door_container{
     margin-left: 100px; 
-  border-style: solid;
-  background-color: #9C9CDD;
+    border-style: solid;
+    background-color: #9C9CDD;
 }
-.lights{
+.lights_container{
     border-style: solid;
     background-color: #EBD2B2;
     margin-left: 50px;
     margin-right: 50px;
 }
-.water-temprature{
+.water-temprature_container{
     margin-right: 100px;
     border-style: solid;
     background-color: #60BAC6;
+}
+.title{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
 }
