@@ -63,6 +63,30 @@ body{
     border-style: solid;
     background-color: #9C9CDD;
 }
+.door{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.doors_elements{
+    border: solid;
+    border-radius: 10%;
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.doors_part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.doors_name{
+    font-size: 20px;
+}
 .lights_container{
     border-style: solid;
     background-color: #EBD2B2;
