@@ -64,6 +64,7 @@ body{
     background-color: #9C9CDD;
 }
 .door{
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -104,6 +105,7 @@ body{
    width: 100%;
    border-width: 3px;
    height: 45px;
+   
 }
 .lights_part2{
     display: grid;
@@ -114,22 +116,21 @@ body{
 .lights_elements{
     border: solid;
     border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   /*  margin-top: 17px;
     margin-bottom: 5px;*/
     padding-left: 15px;
     padding-right: 15px;
 }
-.lights_button{
-    display: flex;
-    justify-content: space-between;
-    line-height: 0.75;
-    align-items: center;
-    gap: 15px;
-}
+
 .colse_all{
     text-align: center;
     font-size: 35px;
-    margin-top: 3px;
+    margin-top:auto;
+    margin-bottom: auto;
 }
 .water-temprature_container{
     margin-right: 100px;
