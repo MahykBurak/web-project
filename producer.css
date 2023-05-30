@@ -102,8 +102,22 @@ body{
     margin-top: 12px;
     padding-right: 15px;
 }
+.range-2{
+    border: solid;
+    border-radius:10px ;
+    border-width: 2px;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-right: 20px;
+    margin-top: 12px;
+    padding-right: 15px;
+    white-space: nowrap;
+    align-items: center;
+}
+
 .form-label{
     font-weight: bold;
+    align-items: center;
 }
 .form-range{
     padding-top: 13px;
@@ -143,6 +157,38 @@ body{
     margin-right: 100px;
     border-style: solid;
     background-color: #77AAC1;
+}
+.minute{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 155px;
+    margin-top: -12px;
+}
+.charge_container{
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 10px;
+    display: flex;
+    gap: 70px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    width: 315px;
+    
+}
+.charge{
+    
+    text-align: center;
+    border: solid;
+   border-radius: 5px;
+    border-width: 2px;
+    width: 120px;
+    height: 40px ;
 }
 .row-2{
     margin-top: 35px;
@@ -230,6 +276,8 @@ body{
     margin-right: 100px;
     border-style: solid;
     background-color: #60BAC6;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 .title{
     /*margin-top: 10px;
