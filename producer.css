@@ -1,3 +1,4 @@
+
 body{
     background-color: black;
 }
@@ -10,10 +11,10 @@ body{
 .logo{
     background-color: white;
     border-radius: 15%;
-    aspect-ratio: 1/1;
+    /*aspect-ratio: 1/1;*/
     width: 30px;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 5px;
 
 }
 .bar_container{
@@ -46,6 +47,98 @@ body{
     border-style: solid;
     background-color: #DFECBD;
 }
+.tempature_room_select{
+    background-color: transparent;
+    border-color: #000;
+    font-weight: 700;
+    border-width: 2px;
+}
+.home_parts{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.form-check-input:checked {
+    background-color: green;
+    border-color: black;
+    font-weight: bold;
+}
+.form-check-input{
+    background-color: transparent;
+    border-color: black;
+    margin:0 !important;
+    border-width: 2px;
+    height: 1.4em;
+    width: 2.6em !important;
+}
+.form-check{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+    width: fit-content;
+    padding-left: 20px;
+}
+.form-check-label{
+    font-weight: bold;
+}
+.select{
+    display: flex;
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-right: 300px;
+    padding-top: 3px;
+}
+.range{
+    border: solid;
+    border-radius:10px ;
+    border-width: 2px;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-right: 20px;
+    margin-top: 12px;
+    padding-right: 15px;
+}
+.form-label{
+    font-weight: bold;
+}
+.form-range{
+    padding-top: 13px;
+}
+.celsius{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 155px;
+    margin-top: -27px;
+}
+.mods_container{
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 10px;
+    
+}
+.mods{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.mod_part{
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
 .vakuum-cleaner_container{
     margin-right: 100px;
     border-style: solid;
@@ -54,7 +147,7 @@ body{
 .row-2{
     margin-top: 35px;
     display: grid;
-   grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
     height: 300px;
     gap: 0px; 
 }
@@ -62,6 +155,7 @@ body{
     margin-left: 100px; 
     border-style: solid;
     background-color: #9C9CDD;
+    padding: 10px;
 }
 .door{
     margin-top: 30px;
@@ -138,7 +232,7 @@ body{
     background-color: #60BAC6;
 }
 .title{
-    margin-top: 10px;
-    margin-left: 10px;
+    /*margin-top: 10px;
+    margin-left: 10px;*/
     font-size: 25px;
 }
