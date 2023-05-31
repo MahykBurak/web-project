@@ -238,6 +238,7 @@ body{
     margin-right: 50px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
 }
 .lights_part1{
    border:solid;
@@ -279,8 +280,29 @@ body{
     padding-left: 20px;
     padding-top: 10px;
 }
+.water-range-container{
+    margin-top: 30px;
+   display: grid;
+   gap: 20px;
+}
+.water-range{
+    border: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.water-celsius{
+    display: flex;
+    padding-left: 110px;
+    justify-content: space-between;
+    margin-top: -35px;
+}
 .title{
-    /*margin-top: 10px;
-    margin-left: 10px;*/
     font-size: 25px;
 }
