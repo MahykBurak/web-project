@@ -306,3 +306,20 @@ body{
 .title{
     font-size: 25px;
 }
+.information{
+    border: solid;
+    width: 410px;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 20px;
+    background-color: #aebe7d;
+    height: 60px;
+    padding-top: 10px;
+    align-items: center;
+}
+.information_border{
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    
+}
