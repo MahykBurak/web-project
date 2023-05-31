@@ -1,25 +1,21 @@
 html {
   font-family: "Itim", cursive;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background-color: black;
+  background-color:  rgb(217, 191, 226);
+  height: 100vh;
+  margin:0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 form {
   text-align: center;
 }
-h1 {
-  margin-top: 80px;
-  color: white;
-  text-align: center;
-  font-size: 70px;
-}
-h2 {
-  margin-top: -20px;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-}
+
 .input_class {
   top: 500px;
   border: 1px solid white;
@@ -41,3 +37,19 @@ h2 {
   font-family: "Itim", cursive;
   box-shadow: 2px 3px 5px rgb(80, 79, 79);
 }
+.box_container{
+  display: flex;
+  background-color: antiquewhite;
+  display: flex;
+  height: 85%;
+  width: 80%;
+  border-radius: 10px;
+}
+.box-1{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-items: center;
+  justify-content: center;
+}
+
