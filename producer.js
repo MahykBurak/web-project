@@ -71,3 +71,27 @@ water_cold_range.addEventListener("change", (event) => {
     const val = event.target.value
     localStorage.setItem('water_cold_range',val)
 })
+
+//Water-end
+
+//Door-start
+const door_garage_isOpen = document.getElementById("door_garage_isOpen")
+const door_frontDoor_isOpen = document.getElementById("door_frontDoor_isOpen")
+const door_backDoor_isOpen = document.getElementById("door_backDoor_isOpen")
+const door_garden_isOpen = document.getElementById("door_garden_isOpen")
+door_garage_isOpen.addEventListener("change",(event) => {
+    const val = event.target.checked
+    localStorage.setItem("door_garage_isOpen",val)
+})
+door_frontDoor_isOpen.addEventListener("change",(event) => {
+    const val = event.target.checked
+    localStorage.setItem("door_frontDoor_isOpen",val)
+})
+door_backDoor_isOpen.addEventListener("change",(event) => {
+    const val = event.target.checked
+    localStorage.setItem("door_backDoor_isOpen",val)
+})
+door_garden_isOpen.addEventListener("change",(event) => {
+    const val = event.target.checked
+    localStorage.setItem("door_garden_isOpen",val)
+})
