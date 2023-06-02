@@ -43,15 +43,15 @@
           <div class="select">
             <h5>Air Conditioning: </h5>
             <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">OFF</label>
+                <label class="form-check-label" for="tempature_isOpen">OFF</label>
                 <input class="form-check-input" type="checkbox" role="switch" id="tempature_isOpen">
-                <label class="form-check-label" for="flexSwitchCheckDefault">ON</label>
+                <label class="form-check-label" for="tempature_isOpen">ON</label>
               </div>
           </div>
 
            <div class="range">
             <div style="display: flex;">
-                <label for="customRange1" class="form-label">Air Conditioning Temperature:</label>
+                <label for="tempature_range" class="form-label">Air Conditioning Temperature:</label>
                 <input type="range" class="form-range" id="tempature_range">
             </div>
            <div class="celsius">
@@ -71,19 +71,19 @@
                 <div class="mod_part">
                   <h6>Heat Mode:</h6>
                   <div class="form-check form-switch" style="padding-left: 50px;">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Hot </label>
-                    
+                    <label class="form-check-label" for="tempature_heatMode_isCold">Hot </label>
+                    <!--TODO: Cold Heat Seçimindeki switch rengi değişimini engelleyelim-->
                     <input class="form-check-input" type="checkbox" role="switch" id="tempature_heatMode_isCold" style="background-color: transparent;">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Cold</label>
+                    <label class="form-check-label" for="tempature_heatMode_isCold">Cold</label>
                   </div>
                 </div>
 
                 <div class="mod_part">
                     <h6>Fan:</h6>
                     <div class="form-check form-switch" style="padding-left: 50px;">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">OFF</label>
+                        <label class="form-check-label" for="tempature_fan_isOpen">OFF</label>
                         <input class="form-check-input" type="checkbox" role="switch" id="tempature_fan_isOpen">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">ON</label>
+                        <label class="form-check-label" for="tempature_fan_isOpen">ON</label>
                       </div>
                 </div>
 
@@ -179,33 +179,37 @@
             </div>
 
             <div class="lights_part2">
-             <div class="lights_elements" >
+             <label for="lights_livingRoom_isOpen" class="lights_elements" >
                 <h4 style="font-size: 20px;">Living <br/> Room</h4>
                 <div class="lights_button">
                     <i class="fa-regular fa-lightbulb fa-2xl"></i>
                 </div>
-             </div>
+                 <input type="checkbox" id="lights_livingRoom_isOpen" style="display:none;"/>
+             </label>
 
-             <div class="lights_elements"  >
+             <label for="lights_kitchen_isOpen" class="lights_elements"  >
                 <h4 style="font-size: 20px;">Kitchen</h4>
                 <div class="lights_button">
                     <i class="fa-solid fa-lightbulb fa-2xl"></i>
                 </div>
-             </div>
+                 <input type="checkbox" style="display:none;" id="lights_kitchen_isOpen"/>
+             </label>
 
-             <div class="lights_elements"  >
+             <label for="lights_bedroom_isOpen" class="lights_elements"  >
                 <h4 style="font-size: 20px;">Bedroom</h4>
                 <div class="lights_button">
                     <i class="fa-regular fa-lightbulb fa-2xl"></i>
                 </div>
-             </div>
+                 <input type="checkbox" style="display:none;" id="lights_bedroom_isOpen"/>
+             </label>
 
-             <div class="lights_elements" >
+             <label for="lights_bath_isOpen" class="lights_elements" >
                 <h4 style="font-size: 20px;">Bath</h4>
                 <div class="lights_button">
                     <i class="fa-solid fa-lightbulb fa-2xl"></i>
                 </div>
-             </div>
+                 <input type="checkbox" style="display:none;" id="lights_bath_isOpen"/>
+             </label>
 
             </div>
         </div>
