@@ -38,7 +38,7 @@ echo "<script>window.localStorage.setItem('auth', 'false');</script>";
 if ($_POST['username'] == $producer && $_POST['password'] == $producer_password) {
   echo "<script>window.localStorage.setItem('mode', 'producer');</script>";
   echo "<script>window.localStorage.setItem('auth', 'true');</script>";
-  echo "<script>window.location.href = 'app.html';</script>";
+  echo "<script>window.location.href = 'producer.html';</script>";
   exit();
 } else if ($_POST['username'] == $consumer && $_POST['password'] == $consumer_password) {
   echo "<script>window.localStorage.setItem('mode', 'consumer');</script>";

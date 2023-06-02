@@ -32,8 +32,7 @@
             <div class="home_parts">
                 <h4 class="title">Temprature</h4>
                 <div>
-                    <select class="form-select tempature_room_select" aria-label="Default select example">
-                        
+                    <select id="tempature_room_select" class="form-select tempature_room_select" aria-label="Default select example">
                         <option value="1" selected>Living Room</option>
                         <option value="2">Bedroom</option>
                         <option value="3">Kitchen</option>
@@ -45,7 +44,7 @@
             <h5>Air Conditioning: </h5>
             <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckDefault">OFF</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <input class="form-check-input" type="checkbox" role="switch" id="tempature_isOpen">
                 <label class="form-check-label" for="flexSwitchCheckDefault">ON</label>
               </div>
           </div>
@@ -53,7 +52,7 @@
            <div class="range">
             <div style="display: flex;">
                 <label for="customRange1" class="form-label">Air Conditioning Temperature:</label>
-                <input type="range" class="form-range" id="customRange1">
+                <input type="range" class="form-range" id="tempature_range">
             </div>
            <div class="celsius">
                <h6>15°C</h6>
@@ -74,7 +73,7 @@
                   <div class="form-check form-switch" style="padding-left: 50px;">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Hot </label>
                     
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="background-color: transparent;">
+                    <input class="form-check-input" type="checkbox" role="switch" id="tempature_heatMode_isCold" style="background-color: transparent;">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Cold</label>
                   </div>
                 </div>
@@ -83,7 +82,7 @@
                     <h6>Fan:</h6>
                     <div class="form-check form-switch" style="padding-left: 50px;">
                         <label class="form-check-label" for="flexSwitchCheckDefault">OFF</label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <input class="form-check-input" type="checkbox" role="switch" id="tempature_fan_isOpen">
                         <label class="form-check-label" for="flexSwitchCheckDefault">ON</label>
                       </div>
                 </div>
@@ -264,6 +263,6 @@
           
       </div>
 
-
+<script type="module" src="producer.js"></script>
 </body>
 </html>
