@@ -55,3 +55,19 @@ lights_close_all.addEventListener("click", (event) => {
     localStorage.setItem('lights_bedroom_isOpen',false)
     localStorage.setItem('lights_bath_isOpen',false)
 })
+//light-end
+
+//Water-start
+
+const water_hot_range = document.getElementById('water_hot_range')
+
+water_hot_range.addEventListener("change", (event) => {
+    const val = event.target.value
+    localStorage.setItem('water_hot_range',val)
+})
+const water_cold_range = document.getElementById('water_cold_range')
+
+water_cold_range.addEventListener("change", (event) => {
+    const val = event.target.value
+    localStorage.setItem('water_cold_range',val)
+})
