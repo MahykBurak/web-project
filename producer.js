@@ -31,6 +31,7 @@ const lights_livingRoom_isOpen = document.getElementById('lights_livingRoom_isOp
 const lights_kitchen_isOpen = document.getElementById('lights_kitchen_isOpen')
 const lights_bedroom_isOpen = document.getElementById('lights_bedroom_isOpen')
 const lights_bath_isOpen = document.getElementById('lights_bath_isOpen')
+const lights_close_all = document.getElementById('lights_close_all')
 lights_livingRoom_isOpen.addEventListener("change", (event) => {
     const val = event.target.checked
     localStorage.setItem('lights_livingRoom_isOpen',val)
@@ -47,4 +48,10 @@ lights_bedroom_isOpen.addEventListener("change", (event) => {
 lights_bath_isOpen.addEventListener("change", (event) => {
     const val = event.target.checked
     localStorage.setItem('lights_bath_isOpen',val)
+})
+lights_close_all.addEventListener("click", (event) => {
+    localStorage.setItem('lights_livingRoom_isOpen',false)
+    localStorage.setItem('lights_kitchen_isOpen',false)
+    localStorage.setItem('lights_bedroom_isOpen',false)
+    localStorage.setItem('lights_bath_isOpen',false)
 })
