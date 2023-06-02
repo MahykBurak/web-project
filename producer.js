@@ -95,3 +95,24 @@ door_garden_isOpen.addEventListener("change",(event) => {
     const val = event.target.checked
     localStorage.setItem("door_garden_isOpen",val)
 })
+//Door-end
+
+//Vacuum-start
+
+const vacuum_room_select = document.getElementById("vacuum_room_select")
+const vacuum_isOpen = document.getElementById("vacuum_isOpen")
+const vacuum_time = document.getElementById("vacuum_time")
+vacuum_room_select.addEventListener("change",(event) => {
+    const val = event.target.value
+    localStorage.setItem("vacuum_room_select",val)
+})
+vacuum_isOpen.addEventListener("change",(event) => {
+    const val = event.target.checked
+    localStorage.setItem("vacuum_isOpen",val)
+
+})
+vacuum_time.addEventListener("change",(event) => {
+    const val = event.target.value
+    localStorage.setItem("vacuum_time",val)
+
+})
