@@ -292,6 +292,27 @@ function loadDoorValues(){
 }
 loadDoorValues()
 
+
+function updateClock() {
+    var clockElement = document.getElementById("clock");
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    // Saat ve saniyeleri iki haneli sayılara dönüştürme
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+
+    // Saat ve saniyeleri güncelleme
+    var clockText = hours + ":" + minutes + ":" + seconds;
+    clockElement.textContent = clockText;
+}
+
+
+setInterval(updateClock, 1000);
+
 var ctx = document.getElementById('myChart1').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',

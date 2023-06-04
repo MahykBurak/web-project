@@ -30,6 +30,8 @@ body{
 }
 .clock{
     padding-right: 100px;
+    font-variant-numeric: normal;
+    width: 250px;
 }
 .table_container{
     display: flex;
