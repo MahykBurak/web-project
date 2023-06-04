@@ -35,24 +35,43 @@ const lightActiveIcon = document.createElement('i')
 const lightDeactiveIcon = document.createElement('i')
 lightActiveIcon.className = "fa-solid fa-lightbulb fa-2xl"
 lightDeactiveIcon.className = "fa-regular fa-lightbulb fa-2xl"
+
+
+const rooms = {
+    1:{
+
+        isOpen:true,
+
+        isCold:true,
+        range:55,
+        fan:true
+    },
+    2:{
+        isOpen:true,
+
+        isCold:true,
+        range:25,
+        fan:false
+    },
+    3:{
+        isOpen:true,
+
+        isCold:true,
+        range:25,
+        fan:true
+    }
+}
+const selectedRoom = 1
 function checkLocalStorageValues() {
     // tempature-start
     if (!localStorage.getItem('tempature_selected_room')) {
-        localStorage.setItem('tempature_selected_room', 1);
+        localStorage.setItem('tempature_selected_room', selectedRoom);
     }
-    if (!localStorage.getItem('tempature_isOpen')) {
-        localStorage.setItem('tempature_isOpen', true);
+    if(!localStorage.getItem('tempature_rooms')){
+        localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
     }
-    if (!localStorage.getItem('tempature_range')) {
-        localStorage.setItem('tempature_range', 25);
-    }
-    if (!localStorage.getItem('tempature_heatMode_isCold')) {
-        localStorage.setItem('tempature_heatMode_isCold',true);
-    }
-    if (!localStorage.getItem('tempature_fan_isOpen')) {
-        localStorage.setItem('tempature_fan_isOpen', false);
-    }
-    // tempature-end
+
+
 
     // light-start
     if (!localStorage.getItem('lights_livingRoom_isOpen')) {
@@ -107,10 +126,14 @@ function checkLocalStorageValues() {
 }
 function loadTempatureValues(){
     tempature_room.value = localStorage.getItem('tempature_selected_room');
-    tempature_isOpen.checked = localStorage.getItem('tempature_isOpen') === 'true';
-    tempature_range.value = localStorage.getItem('tempature_range');
-    tempature_heatMode_isCold.checked = localStorage.getItem('tempature_heatMode_isCold') === 'true';
-    tempature_fan_isOpen.checked = localStorage.getItem('tempature_fan_isOpen') === 'true';
+    const selectedRoom = localStorage.getItem('tempature_selected_room');
+
+    const room = JSON.parse(localStorage.getItem('tempature_rooms'))[selectedRoom]
+    console.log(room)
+    tempature_isOpen.checked = room.isOpen;
+    tempature_range.value = room.range
+    tempature_heatMode_isCold.checked = room.isCold
+    tempature_fan_isOpen.checked = room.fan
 }
 function loadLightValues(){
     const lights_livingRoom_current = localStorage.getItem('lights_livingRoom_isOpen') === 'true';
@@ -170,23 +193,36 @@ loadVacuumValues();
 //tempature-start
 tempature_room.addEventListener('change',(event) => {
     const val = event.target.value
+    loadTempatureValues()
     localStorage.setItem('tempature_selected_room',val)
 })
 tempature_isOpen.addEventListener('change',(event) => {
     const val = event.target.checked
-    localStorage.setItem('tempature_isOpen',val)
+    const currentRoom = localStorage.getItem("tempature_selected_room")
+    const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
+    rooms[currentRoom].isOpen = val
+    localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
 })
 tempature_range.addEventListener("change", (event) => {
     const val = event.target.value
-    localStorage.setItem('tempature_range',val)
+    const currentRoom = localStorage.getItem("tempature_selected_room")
+    const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
+    rooms[currentRoom].range = +val
+    localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
 })
 tempature_heatMode_isCold.addEventListener("change", (event) => {
     const val = event.target.checked
-    localStorage.setItem('tempature_heatMode_isCold',val)
+    const currentRoom = localStorage.getItem("tempature_selected_room")
+    const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
+    rooms[currentRoom].isCold = val
+    localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
 })
 tempature_fan_isOpen.addEventListener("change", (event) => {
     const val = event.target.checked
-    localStorage.setItem('tempature_fan_isOpen',val)
+    const currentRoom = localStorage.getItem("tempature_selected_room")
+    const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
+    rooms[currentRoom].fan = val
+    localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
 })
 //tempature-end
 

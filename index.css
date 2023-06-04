@@ -50,6 +50,15 @@ body {
   justify-items: center;
   justify-content: center;
 }
+.box-2{
+  width: 50%;
+  object-fit: contain;
+}
+.landing-image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .box_elements{
   display: grid;
 }
