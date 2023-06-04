@@ -253,6 +253,7 @@ lights_close_all.addEventListener("click", (event) => {
     localStorage.setItem('lights_kitchen_isOpen',false)
     localStorage.setItem('lights_bedroom_isOpen',false)
     localStorage.setItem('lights_bath_isOpen',false)
+    loadLightValues()
 })
 //light-end
 

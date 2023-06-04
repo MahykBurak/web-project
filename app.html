@@ -11,8 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <title>Consumer</title>
 </head>
-<body lang="tr" class="bg-black h-screen">
-  <main class="px-4 flex w-full h-full py-4 container-fluid text-white gap-2">
+<body lang="tr" class="bg-black h-screen select-none">
+  <main class="px-4 flex w-full select-none h-full py-4 container-fluid text-white gap-2">
     <div class="w-full space-y-4">
       <header class="flex justify-between items-center">
         <section class="rounded-xl">
@@ -39,7 +39,6 @@
             <canvas id="myChart1" style="width:100%;max-width:450px"></canvas>
             <canvas id="myChart2" style="width:100%;max-width:450px"></canvas>
           </div>
-
           <div id="heat-container" class="bg-[#DFECBD] flex flex-col rounded-lg h-full w-full  text-black py-2">
             <div class="flex justify-between items-center w-full px-3">
               <span class="font-black text-lg">AC</span>
@@ -57,7 +56,7 @@
               </div>
               <div class="flex justify-evenly text-center w-full px-2 items-center">
                 <div class="flex flex-col justify-between gap-2">
-                  <div id="heat_status" class="p-2 rounded-lg bg-gray-800 text-white flex justify-center items-center w-14 h-14">
+                  <div id="heat_status" class="cursor-pointer p-2 rounded-lg bg-gray-800 text-white flex justify-center items-center w-14 h-14">
                     ON
                   </div>
                   <span class="text-sm font-medium">status</span>
@@ -83,17 +82,15 @@
           <div id="vacuum-container" class="bg-[#77AAC1] flex flex-col rounded-lg h-full w-full  text-black py-2">
             <div class="flex justify-between items-center w-full px-3">
               <span class="font-black text-lg">Cleaner</span>
-              <select id="vacuum_room_select" class=" border-2 border-gray-800 bg-transparent text-base font-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 ">
-                <option value="1" selected>Living Room</option>
-                <option value="2">Bedroom</option>
-                <option value="3">Kitchen</option>
-              </select>
+              <div id="vacuum_room_select" class="border-2 w-auto border-gray-800 bg-transparent text-base font-medium rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 ">
+
+              </div>
             </div>
             <div class="w-full h-full flex flex-col justify-between pb-12">
               <div class=" mx-auto flex items-center justify-between  pt-8 gap-4">
-                <span id="cleaner-status" class="text-2xl font-bold">Not running</span>
+                <span id="cleaner_status" class="text-2xl font-bold">Not running</span>
                 <div class=" w-28 h-28">
-                <img src="assets/cleaner.png"/>
+                  <img src="assets/cleaner.png"/>
                 </div>
               </div>
               <div class="flex justify-evenly text-center w-full px-2 items-center">
@@ -102,31 +99,38 @@
                   <i class="fa-solid fa-battery-full fa-2xl"></i>
                 </div>
                 <div>
-                  <span id="cleaner-time" class="text-lg font-bold">20</span>
+                  <span id="cleaner_time" class="text-lg font-bold">20</span>
                   <i class="fa-solid fa-clock fa-2xl"></i>
                 </div>
               </div>
-
             </div>
           </div>
           <div id="lights-container" class="bg-[#EBD2B2] flex flex-col justify-center gap-20 items-center rounded-lg  w-full h-full text-black">
             <div class="flex w-full justify-between">
-            <div class="w-full h-full flex flex-col items-center gap-4">
+            <div id="lights_living_btn" class="w-full h-full flex flex-col items-center gap-4">
+              <div id="lights_living">
               <i class="fa-solid fa-lightbulb fa-2xl"></i>
+              </div>
               <span>Living Room</span>
             </div>
-            <div class="w-full h-full flex flex-col items-center gap-4">
+            <div id="lights_kitchen_btn" class="w-full h-full flex flex-col items-center gap-4">
+              <div id="lights_kitchen">
               <i class="fa-regular fa-lightbulb fa-2xl"></i>
+                </div>
               <span>Kitchen</span>
             </div>
             </div>
-            <div class="flex w-full justify-between">
+            <div id="lights_bath_btn" class="flex w-full justify-between">
               <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-solid fa-lightbulb fa-2xl"></i>
+                <div id="lights_bath">
+                  <i class="fa-solid fa-lightbulb fa-2xl"></i>
+                </div>
                 <span>Bath</span>
               </div>
-              <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-regular fa-lightbulb fa-2xl"></i>
+              <div id="lights_bedroom_btn" class="w-full h-full flex flex-col items-center gap-4">
+                <div id="lights_bedroom">
+                  <i class="fa-solid fa-lightbulb fa-2xl"></i>
+                </div>
                 <span>Bedroom</span>
               </div>
             </div>
@@ -136,40 +140,41 @@
               <div class="flex flex-col items-start">
                 <span class="text-xl font-semibold">HOT</span>
               <div class="flex items-center gap-8 ">
-                <button class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">-</button>
-                <span id="feat_tempature" class="text-8xl font-semibold">30°</span>
-                <button class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">+</button>
+                <button id="water_hot_minus" class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">-</button>
+                <span id="water_hot_tempature" class="text-8xl tabular-nums font-semibold">30°</span>
+                <button id="water_hot_plus" class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">+</button>
               </div>
               </div>
               <div class="flex flex-col items-start">
                 <span class="text-xl font-semibold">COLD</span>
               <div class="flex items-center gap-8 ">
-                <button class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">-</button>
-                <span id="feat_tempature" class="text-8xl font-semibold">15°</span>
-                <button class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">+</button>
+                <button id="water_cold_minus" class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">-</button>
+                <span id="water_cold_tempature" class="text-8xl tabular-nums font-semibold">15°</span>
+                <button id="water_cold_plus" class="text-2xl bg-gray-800 text-white w-14 h-14 rounded-xl">+</button>
               </div>
               </div>
 
             </div>
           </div>
-          <div id="lights-container" class="bg-[#9C9CDD] flex flex-col justify-center gap-20 items-center rounded-lg  w-full h-full text-black">
+          <div id="doors-container" class="bg-[#9C9CDD] flex flex-col justify-center gap-20 items-center rounded-lg  w-full h-full text-black">
             <div class="flex w-full justify-between">
               <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-solid fa-lock fa-2xl"></i>
+                <div id="doors_garage"></div>
+
                 <span>Garage</span>
               </div>
               <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-solid fa-lock fa-2xl"></i>
+                <div id="doors_front"></div>
                 <span>Front Door</span>
               </div>
             </div>
             <div class="flex w-full justify-between">
               <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-solid fa-lock fa-2xl"></i>
+                <div id="doors_back"></div>
                 <span>Back Door</span>
               </div>
               <div class="w-full h-full flex flex-col items-center gap-4">
-                <i class="fa-solid fa-lock-open fa-2xl"></i>
+                <div id="doors_garden"></div>
                 <span>Garden</span>
               </div>
             </div>
