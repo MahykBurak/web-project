@@ -324,7 +324,7 @@ function updateClock() {
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
     // Saat ve saniyeleri güncelleme
-    var clockText = hours + ":" + minutes + ":" + seconds;
+    var clockText = hours + ":" + minutes ;
     clockElement.textContent = clockText;
 }
 

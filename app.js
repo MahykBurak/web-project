@@ -212,12 +212,15 @@ function loadLightValues(){
     const lights_livingRoom_current = localStorage.getItem('lights_livingRoom_isOpen') === 'true';
     lights_living.innerHTML = ''
     lights_living.appendChild(lights_livingRoom_current ? lightActiveIcon.cloneNode(true) : lightDeactiveIcon.cloneNode(true))
+
     const lights_kitchen_current = localStorage.getItem('lights_kitchen_isOpen') === 'true';
     lights_kitchen.innerHTML = ''
     lights_kitchen.appendChild(lights_kitchen_current ? lightActiveIcon.cloneNode(true) : lightDeactiveIcon.cloneNode(true))
+
     const lights_bedroom_current = localStorage.getItem('lights_bedroom_isOpen') === 'true';
     lights_bedroom.innerHTML = ''
     lights_bedroom.appendChild(lights_bedroom_current ? lightActiveIcon.cloneNode(true) : lightDeactiveIcon.cloneNode(true))
+
     const lights_bath_current = localStorage.getItem('lights_bath_isOpen') === 'true';
     lights_bath.innerHTML = ''
     lights_bath.appendChild(lights_bath_current ? lightActiveIcon.cloneNode(true) : lightDeactiveIcon.cloneNode(true))
@@ -306,7 +309,7 @@ function updateClock() {
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
     // Saat ve saniyeleri güncelleme
-    var clockText = hours + ":" + minutes + ":" + seconds;
+    var clockText = hours + ":" + minutes
     clockElement.textContent = clockText;
 }
 
