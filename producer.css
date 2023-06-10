@@ -2,6 +2,7 @@
 body{
     background-color: black;
 }
+
 .producer-part{
     display: flex;
     gap: 10px;
@@ -36,7 +37,6 @@ body{
 .table_container{
     display: flex;
     flex-direction: column;
-    
 }
 .row-1{
     display: grid;
@@ -224,7 +224,7 @@ body{
     gap: 15px;
     padding-left: 15px;
     padding-right: 15px;
-
+    cursor: pointer;
 }
 
 .doors_name{
@@ -263,17 +263,19 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    cursor: pointer;
   /*  margin-top: 17px;
     margin-bottom: 5px;*/
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.colse_all{
+.close_all{
     text-align: center;
     font-size: 35px;
     margin-top:auto;
     margin-bottom: auto;
+    cursor: pointer;
 }
 .water-temprature_container{
     margin-right: 100px;
