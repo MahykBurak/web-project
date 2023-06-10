@@ -156,7 +156,7 @@ heat_minus.addEventListener('click',()=>{
     const currentRoom = localStorage.getItem('tempature_selected_room');
     const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
     const current = rooms[currentRoom].range
-    rooms[currentRoom].range = current > 0 ? current - 1 : 0
+    rooms[currentRoom].range = current > 15 ? current - 1 : 15
     localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
     loadTempatureValues()
 })
@@ -164,7 +164,7 @@ heat_plus.addEventListener('click',()=>{
     const currentRoom = localStorage.getItem('tempature_selected_room');
     const rooms = JSON.parse(localStorage.getItem('tempature_rooms'))
     const current = rooms[currentRoom].range
-    rooms[currentRoom].range = current < 35 ? current + 1 : 35
+    rooms[currentRoom].range = current < 40 ? current + 1 : 40
     localStorage.setItem('tempature_rooms',JSON.stringify(rooms))
     loadTempatureValues()
 })
@@ -251,8 +251,8 @@ lights_bedroom_btn.addEventListener("click",() => {
 function loadWater () {
     const hot = localStorage.getItem('water_hot_range')
     const cold = localStorage.getItem('water_cold_range')
-    water_hot_tempature.innerHTML = hot + '°C'
-    water_cold_tempature.innerHTML = cold + '°C'
+    water_hot_tempature.innerHTML = hot
+    water_cold_tempature.innerHTML = cold
 }
 loadWater()
 
@@ -317,7 +317,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 var ctx = document.getElementById('myChart1').getContext('2d');
-var myChart = new Chart(ctx, {
+var Electricty = new Chart(ctx, {
     type: 'bar',
     data: {
         //months
@@ -325,38 +325,131 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: 'Electricity Consumption',
             data: [1611, 3452, 4345, 3125, 2324, 148],
-            backgroundColor: 'rgba(230,0 , 0, 0.5)',
-            borderColor: 'rgba(200,0 , 0, 0.5)',
+            backgroundColor: '#E57066',
+            borderColor: '#E57066',
             borderWidth: 1
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+        animation: {
+            duration: 1000, // Animasyon süresi (milisaniye cinsinden)
+            easing: 'easeOutQuart' // Animasyon eğrisi
+        },
+        responsive:true,
+
     }
 });
 
 var ctx2 = document.getElementById('myChart2').getContext('2d');
-var myChart2 = new Chart(ctx2, {
-    type: 'line',
+var Gas = new Chart(ctx2, {
+    type: 'bar',
     data: {
         labels: ["10:00", '12:00', '14:00', '16:00', '18:00', '20:00'],
         datasets: [{
-            label: 'Heat Difference',
+            label: 'Gas Consumption',
             data: [16, 32, 45, 35, 24, 33],
-            backgroundColor: 'rgba(0, 123, 255, 0.5)',
-            borderColor: 'rgba(0, 123, 255, 1)',
+            backgroundColor: '#3C485E',
+            borderColor: '#3C485E',
             borderWidth: 1
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+
+        animation: {
+            duration: 1000, // Animasyon süresi (milisaniye cinsinden)
+            easing: 'easeOutQuart' // Animasyon eğrisi
+        },
+        responsive:true,
+
     }
 });
+
+var ctx3 = document.getElementById("myChart3").getContext('2d');
+var Water = new Chart(ctx3,{
+    type: 'bar',
+    data: {
+        //months
+        labels: ["January", "February", "March", "April", "May", "June"],
+        datasets: [{
+            label: 'Water Consumption',
+            data: [1611, 3452, 4345, 3125, 2324, 148],
+            backgroundColor: "#60BAC6",
+            borderColor: '#60BAC6',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1000, // Animasyon süresi (milisaniye cinsinden)
+            easing: 'easeOutQuart' // Animasyon eğrisi
+        },
+        responsive:true,
+
+    }
+
+})
+
+var ctx4 = document.getElementById("myChart4").getContext('2d');
+var Internet = new Chart(ctx4,{
+    type: 'bar',
+    data: {
+        //months
+        labels: ["January", "February", "March", "April", "May", "June"],
+        datasets: [{
+            label: 'Internet Consumption',
+            data: [1611, 3452, 4345, 3125, 2324, 148],
+            backgroundColor: '#776EA7',
+            borderColor: '#776EA7',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1000, // Animasyon süresi (milisaniye cinsinden)
+            easing: 'easeOutQuart' // Animasyon eğrisi
+        },
+        responsive:true,
+
+    }
+
+})
+
+const COLORS = [
+    "#E57066",
+    "#60BAC6",
+    "#3C485E",
+    "#776EA7",
+
+];
+const LABELS = [
+    "Electricity",
+    "Water",
+    "Gas",
+    "Internet",
+]
+var ctx5 = document.getElementById("myChart5").getContext('2d');
+var Bill = new Chart(ctx5,{
+    type: 'pie',
+    data: {
+        //months
+        labels: LABELS,
+
+        datasets: [{
+            label: 'Bills',
+            data: [1611, 3452, 4345, 3125],
+            backgroundColor: COLORS,
+            borderColor: 'rgba(200,0 , 0, 0.5)',
+            borderWidth: 1
+        }]
+    },
+
+    options: {
+        animation: {
+            duration: 1000, // Animasyon süresi (milisaniye cinsinden)
+            easing: 'easeOutQuart' // Animasyon eğrisi
+        },
+        responsive:true,
+
+    }
+
+})
