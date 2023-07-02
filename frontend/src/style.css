@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply bg-gray-900 text-slate-50;
+  @apply text-slate-900 h-screen p-0 m-0;
 }
 .container {
-  @apply mx-auto px-4 max-w-7xl;
+  @apply mx-auto px-4 max-w-7xl h-full py-2;
+}
+
+.containerLarge {
+  @apply mx-auto px-4 max-w-[1600px] w-full h-full py-2;
+}
+.controlCard {
+  @apply bg-white rounded-lg shadow-dreamy p-4 h-full w-full;
+}
+.roomsPage {
+  @apply flex flex-col items-start w-full h-full gap-4;
+}
+
+.roomCard {
+  @apply w-full rounded-lg bg-white shadow-dreamy p-4 flex flex-col gap-4;
+}
+.roomCardSection {
+  @apply w-full py-2 border-b-2 border-sky-900 flex items-center justify-between;
+}
+
+.mainFooter {
+  @apply bg-sky-900 text-white opacity-90 backdrop-blur-lg text-center py-4 h-20 flex items-center border-t-2 border-sky-300 fixed w-screen px-5 bottom-0 left-0;
 }

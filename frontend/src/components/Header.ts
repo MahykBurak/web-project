@@ -8,12 +8,13 @@ const Header = (props: PROPS): string => {
   const header = document.createElement('header')
   let currentTab = NAV_TABS.HOME
   header.innerHTML = `
-    <nav class='container'>
-      <ul class='flex justify-center gap-8 items-center text-base font-medium text-slate-200'>
+    <nav class='flex items-center justify-between'>
+      <h1 class='text-3xl font-bold'>AutoHome</h1>
+      <ul class='flex justify-center gap-4 items-center text-base font-medium'>
       ${Object.keys(NAV_TABS)
         .map(
           (key) =>
-            `<li id='${key}-nav-item' class='hover:text-slate-50 w-32 text-center py-1 rounded-lg backdrop-blur hover:bg-slate-600 bg-slate-700 hover:cursor-pointer transition-all'>${
+            `<li id='${key}-nav-item' class='w-32 rounded-lg py-2 text-center  hover:cursor-pointer bg-slate-700 text-slate-50 hover:bg-slate-800 transition-all'>${
               NAV_TABS[key as keyof typeof NAV_TABS]
             }</li>`
         )
@@ -42,9 +43,9 @@ const updateActiveTab = (currentTab: NAV_TABS, header: HTMLElement) => {
   liItems.forEach((li) => {
     const tab = li.textContent! as NAV_TABS
     if (tab === currentTab) {
-      li.classList.add('border', 'border-white')
+      li.classList.add('underline')
     } else {
-      li.classList.remove('border', 'border-white')
+      li.classList.remove('underline')
     }
   })
 }
