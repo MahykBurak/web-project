@@ -28,3 +28,13 @@ body {
 .mainFooter {
   @apply bg-sky-900 text-white opacity-90 backdrop-blur-lg text-center py-4 h-20 flex items-center border-t-2 border-sky-300 fixed w-screen px-5 bottom-0 left-0;
 }
+.loginPage {
+  @apply flex flex-col items-center justify-center w-full h-full;
+}
+.loginForm {
+  @apply flex flex-col items-center justify-center w-full h-full gap-4;
+}
+
+input {
+  @apply border-2 border-sky-900 rounded-lg p-2;
+}
