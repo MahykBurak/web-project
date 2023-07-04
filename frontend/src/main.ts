@@ -2,6 +2,7 @@ import './style.css'
 import { Header, Footer } from './components'
 import { Home, Rooms, Stats } from './pages'
 import { NAV_TABS } from './utils/constants.ts'
+import LoginPage from './pages/login.ts'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 app.classList.add('container', 'flex', 'flex-col', 'gap-4')
@@ -32,11 +33,14 @@ const updateMainContent = (tab: NAV_TABS): void => {
       break
   }
 }
-
-updateMainContent(NAV_TABS.HOME)
-
-Header({
-  element: header,
-  onTabChange: updateMainContent,
-})
-Footer({ element: footer })
+const user = localStorage.getItem('user')
+if (!user) {
+  main.appendChild(LoginPage())
+} else {
+  updateMainContent(NAV_TABS.HOME)
+  Header({
+    element: header,
+    onTabChange: updateMainContent,
+  })
+  Footer({ element: footer })
+}

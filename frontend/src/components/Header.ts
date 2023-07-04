@@ -3,6 +3,10 @@ interface PROPS {
   element: HTMLElement
   onTabChange: (tab: NAV_TABS) => void
 }
+const logout = () => {
+  localStorage.removeItem('user')
+  window.location.reload()
+}
 const Header = (props: PROPS): string => {
   const { element, onTabChange } = props
   const header = document.createElement('header')

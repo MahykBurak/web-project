@@ -1,3 +1,4 @@
+import { getAllUsers } from '../db'
 import {
   AcCard,
   CoffeCard,
@@ -37,7 +38,7 @@ const Home = () => {
   homeRow2.appendChild(FridgeCard())
   homeRow2.appendChild(WashingMachineCard())
   homeRow3.appendChild(VacuumCleanerCard())
-
+  getAllUsers().then((users) => console.log(users))
   return page
 }
 
